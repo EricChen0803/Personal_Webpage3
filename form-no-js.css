@@ -1,0 +1,44 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(Kanit-Medium.ttf);
+}
+
+body {
+    background-image:linear-gradient(to left, pink, white);
+    background-repeat: repeat;
+}
+*{
+    font-family: myFirstFont, serif;
+}
+
+#contactForm{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 800px;
+}
+
+#outputs {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+output[for="info"] {
+    color: green;
+}
+
+output[for="error"] {
+    color: red;
+}
+
+
+input:invalid {
+    box-shadow: 0 0 5px 1px red;
+}
+
+input:valid {
+    box-shadow: 0 0 5px 1px black;
+}

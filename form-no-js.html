@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form-no-js.css">
+    <title>Form-no-js</title>
+</head>
+<body>
+    <a href = 'form-js.html'>To form-js</a>
+    <section>
+        <!--Contact form for hw4-->
+        <form id="contactForm" action="https://httpbin.org/post" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="comments">Comments:</label>
+            <input id="comments" name="comments" required maxlength="200" pattern = "[a-zA-Z0-9\s.,!?&quot;&#39;@_]*"></input>
+        
+            <input type="hidden" name="possible_bot" value="true">
+
+            <div id = 'outputs'>
+                <output for="error" name="comments_error" role="alert">error message example</output>
+                <output for="info" class = 'info' name="comments_info">info message example</output>
+            </div>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </section>
+</body>
+</html>
