@@ -3,17 +3,28 @@
     src: url(Kanit-Medium.ttf);
 }
 
-body {
-    background-color: white;
-}
+:root {
+    --background-light: white;
+    --text-light: black;
+    --font-light: myFirstFont;
 
-body.dark-theme {
-    background-color: black;
-    color:white;
-}
-*{
-    font-family: myFirstFont, serif;
-}
+    --background-dark: black;
+    --text-dark: white;
+    --font-dark: myFirstFont;
+  }
+
+  body {
+    background-color: var(--background-light);
+    color: var(--text-light);
+    font-family: var(--font-light);
+  }
+
+  body.dark-theme {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+    font-family: var(--font-dark);
+  }
+
 
 .warning{
     border: 4px solid;
