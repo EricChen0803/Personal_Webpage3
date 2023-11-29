@@ -88,3 +88,13 @@ input:invalid {
 input:valid {
     box-shadow: 0 0 5px 1px black;
 }
+
+
+@keyframes flash {
+    0% { background-color: red; }
+    100% { background-color: white; }
+  }
+
+  .flash-comment {
+    animation: flash 0.5s ease;
+  }

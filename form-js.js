@@ -173,6 +173,12 @@ document.addEventListener('DOMContentLoaded', function () {
             comments.setCustomValidity("Please fill in your comment!");
         } 
         else if (comments.validity.patternMismatch) {
+            var inputField = document.getElementById('comments');
+            inputField.classList.add('flash-comment');
+
+            setTimeout(function() {
+                inputField.classList.remove('flash-input');
+            }, 500);
             comments.setCustomValidity('Please only include numbers, english letters and punctuations!');
             error.textContent = 'Please only include numbers, english letters and punctuations!';
             if(error.classList.contains('invalid_error')){
